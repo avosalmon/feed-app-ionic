@@ -1,6 +1,8 @@
-/bower_components
-/node_modules
-/.sass-cache
+platforms/
+plugins/
+bower_components/
+node_modules/
+.sass-cache/
 .tmp
 .DS_Store
 Thumbs.db
