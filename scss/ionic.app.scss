@@ -21,3 +21,24 @@ $ionicons-font-path: "../../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+.blog-tag {
+	background-color: #000;
+	color: #fff;
+	padding: 1px 10px;
+	font-size: 0.9em;
+}
+
+.blog-title {
+	margin: 0;
+	padding: 0 5px 8px;
+	line-height: 0.6em;
+	a {
+		font-size: 0.5em;
+		text-decoration: none;
+		color: #000;
+		&:visited {
+			text-decoration: none;
+			color: #000;
+		}
+	}
+}

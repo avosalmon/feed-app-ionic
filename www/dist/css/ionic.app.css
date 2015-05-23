@@ -7674,3 +7674,21 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+.blog-tag {
+  background-color: #000;
+  color: #fff;
+  padding: 1px 10px;
+  font-size: 0.9em; }
+
+.blog-title {
+  margin: 0;
+  padding: 0 5px 8px;
+  line-height: 0.6em; }
+  .blog-title a {
+    font-size: 0.5em;
+    text-decoration: none;
+    color: #000; }
+    .blog-title a:visited {
+      text-decoration: none;
+      color: #000; }

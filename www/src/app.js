@@ -8,7 +8,8 @@
     function dependencies() {
         return [
             'ionic',
-            'app.routes'
+            'app.routes',
+            'app.controllers'
         ];
     };
 

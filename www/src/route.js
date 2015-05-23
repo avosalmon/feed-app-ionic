@@ -19,7 +19,8 @@
                 url: '/blog',
                 views: {
                     'tab-blog': {
-                        templateUrl: 'templates/tab-blog.html'
+                        templateUrl: 'templates/tab-blog.html',
+                        controller: 'BlogController as vm'
                     }
                 }
             })

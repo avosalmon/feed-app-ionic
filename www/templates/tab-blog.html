@@ -1,3 +1,15 @@
 <ion-view>
-    <ion-content>Blog</ion-content>
+    <ion-content>
+        <div ng-repeat="post in vm.posts">
+            <div class="list card" ng-repeat="(id, data) in post">
+                <div>
+                    <span class="blog-tag">{{ data.tag }}</span>
+                    <h2 class="blog-title"><a ng-href="{{ data.entry_url }}">{{ data.title }}</a></h2>
+                </div>
+                <div class="item item-image">
+                    <a ng-href="{{ data.entry_url }}"><img ng-src="{{ data.image_url }}"></a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
 </ion-view>
