@@ -4,10 +4,10 @@
             <div class="list card" ng-repeat="(id, data) in post">
                 <div>
                     <span class="blog-tag">{{ data.tag }}</span>
-                    <h2 class="blog-title"><a ng-href="{{ data.entry_url }}">{{ data.title }}</a></h2>
+                    <h2 class="blog-title"><a href="#" ng-click="vm.browse(data.entry_url)">{{ data.title }}</a></h2>
                 </div>
                 <div class="item item-image">
-                    <a ng-href="{{ data.entry_url }}"><img ng-src="{{ data.image_url }}"></a>
+                    <a href="#" ng-click="vm.browse(data.entry_url)"><img ng-src="{{ data.image_url }}"></a>
                 </div>
             </div>
         </div>

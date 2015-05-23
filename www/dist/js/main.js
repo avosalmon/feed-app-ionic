@@ -133,6 +133,7 @@
         vm.offset = 0;
         vm.limit = 20;
         vm.getPosts = getPosts;
+        vm.browse = browse;
 
         activate();
 
@@ -148,6 +149,10 @@
 
         function setResponseToScope(response) {
 
+        }
+
+        function browse(url) {
+            window.open(url, '_system', 'loation=yes');
         }
     }
 
