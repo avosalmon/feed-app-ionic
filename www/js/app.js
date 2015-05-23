@@ -1,56 +1,30 @@
-// Ionic Starter App
+(function () {
+    'use strict';
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-angular.module('app', ['ionic'])
+    angular
+        .module('app', dependencies())
+        .run(run);
 
-.run(function($ionicPlatform) {
-    $ionicPlatform.ready(function() {
-        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-        // for form inputs)
-        if(window.cordova && window.cordova.plugins.Keyboard) {
-            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-        }
-        if(window.StatusBar) {
-            StatusBar.styleDefault();
-        }
-    });
-})
+    function dependencies() {
+        return [
+            'ionic',
+            'app.routes'
+        ];
+    };
 
-.config(function($stateProvider, $urlRouterProvider) {
+    run.$inject = ['$ionicPlatform'];
 
-$stateProvider
-    .state('tab', {
-        url: '/tab',
-        abstract: true,
-        templateUrl: 'templates/tabs.html'
-    })
-    .state('tab.blog', {
-        url: '/blog',
-        views: {
-            'tab-blog': {
-                templateUrl: 'templates/tab-blog.html'
+    function run($ionicPlatform) {
+        $ionicPlatform.ready(function() {
+            // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+            // for form inputs)
+            if(window.cordova && window.cordova.plugins.Keyboard) {
+                cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
             }
-        }
-    })
-    .state('tab.instagram', {
-        url: '/instagram',
-        views: {
-            'tab-instagram': {
-                templateUrl: 'templates/tab-instagram.html'
+            if(window.StatusBar) {
+                StatusBar.styleDefault();
             }
-        }
-    })
-    .state('tab.twitter', {
-        url: '/twitter',
-        views: {
-            'tab-twitter': {
-                templateUrl: 'templates/tab-twitter.html'
-            }
-        }
-    });
+        });
+    }
 
-$urlRouterProvider.otherwise('/tab/blog');
-
-});
+})();
