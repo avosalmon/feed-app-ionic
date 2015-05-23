@@ -152,7 +152,7 @@
         }
 
         function browse(url) {
-            window.open(url, '_system', 'loation=yes');
+            window.open(url, '_blank', 'loation=yes');
         }
     }
 
