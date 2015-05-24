@@ -7675,9 +7675,15 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-#spinner-wrapper {
-  text-align: center;
-  margin-top: 100px; }
+.spinner-outer-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 75vh;
+  z-index: 10; }
+  .spinner-outer-wrapper .spinner-inner-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%; }
 
 .blog-tag {
   background-color: #000;
