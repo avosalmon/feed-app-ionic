@@ -7678,12 +7678,12 @@ a.button {
 .spinner-outer-wrapper {
   position: absolute;
   width: 100%;
-  height: 75vh;
+  height: 70vh;
   z-index: 10; }
   .spinner-outer-wrapper .spinner-inner-wrapper {
     position: absolute;
     top: 50%;
-    left: 50%; }
+    left: 46%; }
 
 .blog-tag {
   background-color: #000;
