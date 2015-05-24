@@ -7702,3 +7702,6 @@ a.button {
     .blog-title a:visited {
       text-decoration: none;
       color: #000; }
+
+.load-more-wrapper {
+  padding: 0 10%; }

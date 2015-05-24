@@ -31,6 +31,7 @@
             firebase.orderByKey().limitToLast(vm.limit).on('value', function(snapshot) {
                 vm.posts = snapshot.val();
                 vm.loading = false;
+                vm.initialized = true;
                 $scope.$apply();
             });
         }

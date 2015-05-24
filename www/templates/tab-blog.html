@@ -15,5 +15,8 @@
                 <a href="#" ng-click="vm.browse(post.entry_url)"><img ng-src="{{ post.image_url }}"></a>
             </div>
         </div>
+        <div class="load-more-wrapper">
+            <button class="button button-block button-outline button-positive" ng-if="vm.initialized">もっと読む</button>
+        </div>
     </ion-content>
 </ion-view>
