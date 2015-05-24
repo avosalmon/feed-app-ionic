@@ -21,6 +21,11 @@ $ionicons-font-path: "../../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+#spinner-wrapper {
+	text-align: center;
+	margin-top: 100px;
+}
+
 .blog-tag {
 	background-color: #000;
 	color: #fff;

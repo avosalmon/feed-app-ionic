@@ -7675,6 +7675,10 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+#spinner-wrapper {
+  text-align: center;
+  margin-top: 100px; }
+
 .blog-tag {
   background-color: #000;
   color: #fff;

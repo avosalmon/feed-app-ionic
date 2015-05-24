@@ -1,14 +1,14 @@
 <ion-view>
     <ion-content>
-        <div ng-repeat="post in vm.posts">
-            <div class="list card" ng-repeat="(id, data) in post">
-                <div>
-                    <span class="blog-tag">{{ data.tag }}</span>
-                    <h2 class="blog-title"><a href="#" ng-click="vm.browse(data.entry_url)">{{ data.title }}</a></h2>
-                </div>
-                <div class="item item-image">
-                    <a href="#" ng-click="vm.browse(data.entry_url)"><img ng-src="{{ data.image_url }}"></a>
-                </div>
+        <!-- <ion-refresher pulling-text="Pull to refresh..." on-refresh="vm.getPosts()"></ion-refresher> -->
+        <div id="spinner-wrapper" ng-if="vm.loading"><ion-spinner icon="spiral"></ion-spinner></div>
+        <div class="list card" ng-repeat="post in vm.posts">
+            <div>
+                <span class="blog-tag">{{ post.tag }}</span>
+                <h2 class="blog-title"><a href="#" ng-click="vm.browse(post.entry_url)">{{ post.title }}</a></h2>
+            </div>
+            <div class="item item-image">
+                <a href="#" ng-click="vm.browse(post.entry_url)"><img ng-src="{{ post.image_url }}"></a>
             </div>
         </div>
     </ion-content>

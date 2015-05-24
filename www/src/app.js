@@ -8,6 +8,7 @@
     function dependencies() {
         return [
             'ionic',
+            'firebase',
             'app.routes',
             'app.controllers'
         ];
