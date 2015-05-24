@@ -117,6 +117,7 @@
         vm.loading = false;
         vm.limit = 20;
         vm.getPosts = getPosts;
+        vm.loadMore = loadMore;
         vm.browse = browse;
 
         activate();
@@ -129,12 +130,17 @@
 
         function getPosts() {
             vm.loading = true;
-            firebase.orderByKey().limitToLast(vm.limit).on('value', function(snapshot) {
+            firebase.orderByKey().limitToLast(vm.limit).once('value', function(snapshot) {
                 vm.posts = snapshot.val();
                 vm.loading = false;
                 vm.initialized = true;
                 $scope.$apply();
             });
+        }
+
+        function loadMore() {
+            vm.limit = vm.limit + 10;
+            vm.getPosts();
         }
 
         // open url with in-app browser
