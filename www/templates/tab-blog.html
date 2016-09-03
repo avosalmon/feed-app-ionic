@@ -6,6 +6,7 @@
                 <ion-spinner icon="spiral"></ion-spinner>
             </div>
         </div>
+        <button class="button" ng-click="vm.openActionSheet()">ActionSheet</button>
         <div class="list card" ng-repeat="post in vm.posts">
             <div>
                 <span class="blog-tag">{{ post.tag }}</span>

@@ -106,9 +106,9 @@
         .module('app.blog-controller', [])
         .controller('BlogController', BlogController);
 
-    BlogController.$inject = ['$scope', '$firebaseObject'];
+    BlogController.$inject = ['$scope', '$ionicActionSheet', '$firebaseObject'];
 
-    function BlogController($scope, $firebaseObject) {
+    function BlogController($scope, $ionicActionSheet, $firebaseObject) {
         var vm = this;
         var firebase = new Firebase('https://brilliant-heat-3361.firebaseio.com/blog');
 
@@ -119,6 +119,7 @@
         vm.getPosts = getPosts;
         vm.loadMore = loadMore;
         vm.browse = browse;
+        vm.openActionSheet = openActionSheet;
 
         activate();
 
@@ -147,6 +148,15 @@
         function browse(url) {
             window.open(url, '_blank', 'loation=yes');
         }
+
+        function openActionSheet() {
+            $ionicActionSheet.show({
+                buttons: [
+                    { text: 'open' }
+                ]
+            });
+        }
+
     }
 
 })();
